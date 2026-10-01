@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hipervínculos en HTML</title>
+        <meta charset="utf-8"/>
+    </head>
+    <body>
+        <h1 id="inicio">Hipervínculos</h1>
+        <ul>
+            <li><a href="#inline">Inline</a></li>
+            <li><a href="#relativos">Relativos</a></li>
+            <li><a href="#absolutos">Absolutos</a></li>
+        </ul>
+        <p> Address | a </p>
+        <h2 id="inline">Inline | Referencia en el mismo documento</h2>
+        <a href="#relativos">Ir a Relativos</a><br/>
+        <a href="#absolutos">Ir a Absolutos</a>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt quasi laborum maxime, molestias commodi deserunt architecto blanditiis itaque impedit eaque, fugit, veniam dolores nobis nemo rerum. Nostrum non voluptates alias!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, consectetur dignissimos! Tempora, odio nisi omnis qui at voluptatem et alias temporibus aliquid nesciunt quod dolore unde neque, quidem numquam perspiciatis?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi temporibus reiciendis mollitia, sunt praesentium necessitatibus minima ea, tempore ratione iure officia accusantium delectus rem aliquid iste culpa voluptatem incidunt magnam.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid, dolore fuga? Id enim ex perspiciatis, voluptatibus perferendis at repellendus! Cum eaque aperiam culpa, animi delectus iure fugiat debitis magnam velit.</p>
+        <a href="#inicio">Atrás</a>
+        <h2 id="relativos">Relativos | Referencia a recursos en el mismo dominio</h2>
+        <a href="#inline">Ir a Inline</a><br/>
+        <a href="#absolutos">Ir a Absolutos</a>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt quasi laborum maxime, molestias commodi deserunt architecto blanditiis itaque impedit eaque, fugit, veniam dolores nobis nemo rerum. Nostrum non voluptates alias!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, consectetur dignissimos! Tempora, odio nisi omnis qui at voluptatem et alias temporibus aliquid nesciunt quod dolore unde neque, quidem numquam perspiciatis?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi temporibus reiciendis mollitia, sunt praesentium necessitatibus minima ea, tempore ratione iure officia accusantium delectus rem aliquid iste culpa voluptatem incidunt magnam.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid, dolore fuga? Id enim ex perspiciatis, voluptatibus perferendis at repellendus! Cum eaque aperiam culpa, animi delectus iure fugiat debitis magnam velit.</p>
+        <a href="#inicio">Atrás</a>
+        <h2 id="absolutos">Absolutos | Referencias a recursos en dominios distintos</h2>
+        <a href="#inline">Ir a Inline</a>
+        <a href="#relativos">Ir a Relativos</a><br/>
+         <pre>
+        | index.html
+        | hipervinculos.html &lt;-
+        | -&gt; institucion
+            |  institucion.html
+            |  personal.html
+            | ubicaciones.html
+        | -&gt; tienda
+            |  producto_a.html
+            |  producto_b.html
+            | -&gt; oferta202609
+                | pre-christmas.html
+        </pre>
+        <a href="institucion/personal.html">Personal de la Institución</a><br/>
+        <a href="tienda/oferta202609/pre-christmas.html">Ofertas Pre Navideñas</a><br/>
+        <!-- Asumiendo que estamos en el archivo pre-christmas.html en
+         la carpeta oferta303609 y se desea navegar a index.html en
+         la raiz  -->
+        <a href="../../index.html">Ir a Index.html</a>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt quasi laborum maxime, molestias commodi deserunt architecto blanditiis itaque impedit eaque, fugit, veniam dolores nobis nemo rerum. Nostrum non voluptates alias!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, consectetur dignissimos! Tempora, odio nisi omnis qui at voluptatem et alias temporibus aliquid nesciunt quod dolore unde neque, quidem numquam perspiciatis?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi temporibus reiciendis mollitia, sunt praesentium necessitatibus minima ea, tempore ratione iure officia accusantium delectus rem aliquid iste culpa voluptatem incidunt magnam.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid, dolore fuga? Id enim ex perspiciatis, voluptatibus perferendis at repellendus! Cum eaque aperiam culpa, animi delectus iure fugiat debitis magnam velit.</p>
+        <a href="#inicio">Atrás</a>
+        <h2>Otras Referencias de HTML en Portales Web</h2>
+        <a target="_blank" href="https://www.unicah.edu/carrera/ingeniera-en-ciencias-de-la-computacion/">Ir a la Descripción de Carrera de ICC de UNICAH</a>
+       
+    </body>
+</html>
