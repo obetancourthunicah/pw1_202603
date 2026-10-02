@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Imágenes en HTML</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1>Uso de Imágenes en HTML</h1>
+        <h2>Etiqueta img</h2>
+        <img src="imgs/web_optimized.jpg"
+            alt="Foto de Perfil de Fulano de Tal" />
+        <br/>
+        <img src="imgs/diagrama.svg"
+            alt="Diagrama de Implementación de Api Gateways" />
+        <br/>
+        <img src="imgs/linux-svgrepo-com.svg"
+            alt="Logo de Pingüino de Linux" />
+        
+        
+        <h2>Vectoriales</h2>
+        <svg width="64px" height="64px" viewBox="0 -11 70 70" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <rect x="0.5" y="0.5" width="69" height="47" rx="5.5" fill="white" stroke="#D9D9D9"></rect> <path fill-rule="evenodd" clip-rule="evenodd" d="M35.3945 34.7619C33.0114 36.8184 29.92 38.0599 26.5421 38.0599C19.0047 38.0599 12.8945 31.8788 12.8945 24.254C12.8945 16.6291 19.0047 10.448 26.5421 10.448C29.92 10.448 33.0114 11.6895 35.3945 13.7461C37.7777 11.6895 40.869 10.448 44.247 10.448C51.7843 10.448 57.8945 16.6291 57.8945 24.254C57.8945 31.8788 51.7843 38.0599 44.247 38.0599C40.869 38.0599 37.7777 36.8184 35.3945 34.7619Z" fill="#ED0006"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M35.3945 34.7619C38.3289 32.2296 40.1896 28.4616 40.1896 24.254C40.1896 20.0463 38.3289 16.2783 35.3945 13.7461C37.7777 11.6895 40.869 10.448 44.247 10.448C51.7843 10.448 57.8945 16.6291 57.8945 24.254C57.8945 31.8788 51.7843 38.0599 44.247 38.0599C40.869 38.0599 37.7777 36.8184 35.3945 34.7619Z" fill="#F9A000"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M35.3946 13.7461C38.329 16.2784 40.1897 20.0463 40.1897 24.254C40.1897 28.4616 38.329 32.2295 35.3946 34.7618C32.4603 32.2295 30.5996 28.4616 30.5996 24.254C30.5996 20.0463 32.4603 16.2784 35.3946 13.7461Z" fill="#FF5E00"></path> </g></svg>
+
+        <h2>Imágenes Responsive</h2>
+        <picture>
+            <source
+                srcset="https://picsum.photos/id/140/1300/720"
+                media="(min-width:1025px)"/>
+            <source
+                srcset="https://picsum.photos/id/140/1024/640"
+                media="(min-width:700px)"/>
+            <img
+                src="https://picsum.photos/id/140/480/480"
+                alt="Imágen de Ejemplo" />
+        </picture>
+    </body>
+</html>
