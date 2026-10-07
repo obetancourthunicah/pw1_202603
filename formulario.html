@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Formularios en HTML</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1>Formularios en HTML</h1>
+        <form action="formulario.html" method="GET">
+            <!-- ¿ Qué es serializar información ?
+             Representar de forma codificada información
+             url-econding formulario.html?name=Orlando%20Jose%20Betancourth&email=orlando.betancourth%90gmail.com
+
+             httprequest
+             body:
+                name=Orlando Jose Betancourth
+                email=obetancourthunicah@gmail.com
+             -->
+            <label for="nombre" title="Nombre Completo según su DNI">Nombre Completo:</label>
+            <input
+                type="text" name="name" id="nombre"
+                placeholder="Su nombre completo aquí"
+            />
+            <br/>
+            <label for="email" title="Correo Corporativo">Correo Electrónico:</label>
+            <input
+                type="email" name="email" id="email"
+                placeholder="tucorre@electri.nico"
+            />
+            <br/>
+            <label for="pwsd" title="Contraseña">Contraseña:</label>
+            <input
+                type="password" name="pwsd" id="pwsd"
+                placeholder="1 M, 1 m, 1 N, 1 %$#@"
+            />
+            <br/>
+            <label for="edad" title="Edad">Edad:</label>
+            <input
+                type="number" name="edad" id="edad"
+                min="0" max="100" step="1"
+                placeholder="0-100"
+            />
+            <br/>
+            <fieldset>
+                <legend>Color de Perfil</legend>
+                <label for="rdbAzul">Azul</label>
+                <input type="radio" name="color" value="blue" id="rdbAzul" checked/>
+                &nbsp;
+                <label for="rdbRojo">Rojo</label>
+                <input type="radio" name="color" value="red" id="rdbRojo"/>
+                &nbsp;
+                <label for="rdbVerde">Verde</label>
+                <input type="radio" name="color" value="green" id="rdbVerde"/>
+            </fieldset>
+            <br/>
+            <label for="cmbPaises">Nacionalidad:</label>
+            <select id="cmbPaises" name="nacionalidad">
+                <option value="NA">Seleccione Nacionalidad</option>
+                <option value="HN">Honduras</option>
+                <option value="GT">Guatemala</option>
+                <option value="NI">Nicaragua</option>
+                <option value="SL">El Salvador</option>
+                <option value="CR" selected>Costa Rica</option>
+                <option value="BZ">Belice</option>
+                <option value="PN">Panamá</option>
+                <option value="VN">Venezuela</option>
+                <option value="CB">Colobia</option>
+                <option value="MX">México</option>
+                <option value="US">Estados Unidos</option>
+                <option value="CN">Canadá</option>
+            </select>
+            <br/>
+            <label for="txtBio">Biografía:</label><br/>
+            <textarea
+                name="txtBio"
+                id="txtBio"
+                placeholder="Un párrafo que lo describa a usted"
+            ></textarea>
+            <hr/>
+            <button type="submit" name="btnEnviar">Enviar</button>
+            <button type="button" id="btnParaJavascript">No Funciona</button>
+            <button type="reset" id="btnBorrar">Limpiar</button>
+        </form>
+    </body>
+</html>
