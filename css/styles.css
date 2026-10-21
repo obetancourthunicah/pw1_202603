@@ -1,0 +1,73 @@
+/*
+    update HTMLElements set (... propiedad = 'valor') where
+     path = "header/div/h1";
+*/
+
+/*
+Cascade C Cascada
+Style   S Estilo
+Sheet   S Hoja
+
+Hoja de Estilo en Cascada
+*/
+/* header div h1 {
+    background-color: red;
+    color: blue;
+}
+
+p {
+    background-color:blueviolet;
+    color:greenyellow;
+} */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-size:1rem;
+    padding:0px;
+    margin:0px;
+}
+
+header {
+    background-color: #534c39;
+    color: #f0eee9;
+    display:flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+}
+
+header .brand-section{
+    flex: 1;
+    display:flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+header .brand-section img{
+    width:64px;
+    height: 64px;
+    border-radius: 50%;
+}
+
+header nav ul {
+    display: flex;
+    gap:0.5rem;
+    list-style: none;
+}
+
+header nav ul li a {
+    color: #f0eee9;
+    text-decoration: none;
+    padding: 0.75rem 1rem;
+}
+
+header nav ul li a:hover {
+    background-color: #6d6244;
+}
+
+.warning {
+    color:yellow;
+    font-weight: bold;
+}
