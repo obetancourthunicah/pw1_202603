@@ -51,6 +51,8 @@ header .brand-section img{
     border-radius: 50%;
 }
 
+
+
 header nav ul {
     display: flex;
     gap:0.5rem;
@@ -70,4 +72,151 @@ header nav ul li a:hover {
 .warning {
     color:yellow;
     font-weight: bold;
+}
+
+.hero-panel{
+    position:relative;
+    width:100vw;
+    height:80vh;
+}
+.hero-panel img{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+
+}
+.hero-panel .hero-card{
+    position: absolute;
+    top:50%;
+    left:50%;
+    background-color: #f0eee9;
+    padding: 1rem;
+    transform: translate(-50%,-50%);
+    border-radius: 9px;
+    box-shadow: 3px 3px 15px #534c39;
+}
+.hero-panel .hero-card a {
+    display: block;
+    text-decoration: none;
+    color:#fff;
+    padding: 0.75rem 1rem;
+    border-radius: 17px;
+    margin: auto 0.5rem;
+    background-color: #d6a61f;
+    text-align:center;
+}
+
+.container {
+    max-width: 1120px;
+    margin: 1rem auto;
+    border: 1px solid #333;
+    padding: 1rem;
+}
+
+.card-holder{
+    display:flex;
+    flex-wrap: wrap;
+    gap:0.75rem;
+}
+
+.card {
+    width:320px;
+    border: 1px solid #777;
+    border-radius: 5px;
+}
+
+.card .card-header{
+    height: 200px;
+}
+
+.card .card-header img{
+    width:100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card [data-role="card-body"],
+.card [data-role="card-footer"] {
+    padding:0.5rem;
+}
+
+.card [data-role="card-body"].suggested,
+.card [data-role="card-footer"].suggested {
+    background-color:#d6a61f;
+}
+
+.card [data-role="card-body"] h3 {
+    margin:0px;
+}
+
+/*
+Resposive Design:
+La capacidad de una página que permita
+renderizarse adecuadamente y ajustarse
+según el tamaño disponible de pantalla
+(viewport) y orientación.
+
+Adaptar los diseños de escritorio a
+dispositivos móviles.
+(Eliminar contenido)
+Desktop First
+
+Mobile First
+
+>>>> Cascada
+
+// bool isMobile = true;
+int screenwidth = getScreenWidth();
+bool isTablet = (screenwidth > 700 && screenwidth < 1025) ;
+bool isDesktop = (screenwidth >= 1025);
+
+string backgroundcolor = "#000";
+if (isTablet) {
+    backgroundcolor = "#333";
+} esle if(isDesktop) {
+    backgroundcolor = "#777";
+}
+
+print(backgroundcolor);
+-------------
+#000
+
+ mobile < 768
+ tablet 768
+ desktop 1025
+ widescreen 1328
+
+breakpoints
+*/
+
+/* Mobile No Ocupa Defualt*/
+/* body {
+    background-color: #000;
+}
+
+@media (min-width:768px) {
+    body {
+        background-color: #F00;
+    }
+}
+
+@media (min-width:1025px) {
+    body {
+        background-color: #00F;
+    }
+}
+
+@media (min-width:1328px) {
+    body {
+        background-color: #0F0;
+    }
+} */
+.full-img {
+    max-width:100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+article {
+    padding:1rem;
 }
