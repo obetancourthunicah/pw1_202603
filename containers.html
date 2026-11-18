@@ -8,6 +8,7 @@
 
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="css/grid.css" />
+    <script src="javascript/script.js"></script>
     <style>
         /* <selectores> { ..reglas (llave : valor;)}
         /* update HTMLElements set ( propiedad = 'valor', ...)  where tag='h2'; */
@@ -25,20 +26,26 @@
 </head>
 
 <body>
-    <!-- <header>
+    <header>
         <div class="brand-section">
+            <div class="hmb-button">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
             <img src="https://picsum.photos/id/289/64/64" alt="Logo del Branding" />
             <h1>Portales Web 1</h1>
         </div>
-        <nav>
+        <nav class="hidden">
             <ul>
                 <li><a href="#inicio">Home</a></li>
                 <li><a href="#pricing">Precios</a></li>
                 <li><a href="#test">Testimonios</a></li>
                 <li><a href="#about">Nosotros</a></li>
+                <li><a href="#contact">Contact Us</a></li>
             </ul>
         </nav>
-    </header> -->
+    </header>
     <main>
 
 
@@ -155,11 +162,55 @@
             </div>
         </section>
 
+        <section class="full-containter">
+            <div class="grid">
+                <div class="row">
+                    <div class="col-12 col-m-6">
+                        <picture>
+                            <source srcset="https://placehold.co/700x700" media="(min-width:1025px)" />
+                            <source srcset="https://placehold.co/400x400" media="(min-width:700px)" />
+                            <img class="full-img" src="https://placehold.co/380x380" alt="half panel image" />
+                        </picture>
+                    </div>
+                    <div class="col-12 col-m-6 p-4">
+                        <h2>
+                            Demo formulario
+                        </h2>
+                        <form action="containers.html" method="GET">
+                            <div class="field">
+                                <label for="txtNombre">Nombre:</label>
+                                <input type="text" name="txtNombre" id="txtNombre" placeholder="Nombre Completo" />
+                            </div>
+                            <div class="field">
+                                <label for="txtEmail">Correo:</label>
+                                <input type="text" name="txtEmail" id="txtEmail" placeholder="correo electrónico" />
+                            </div>
+                            <div class="field">
+                                <label for="cmbOpciones">Opciones:</label>
+                                <select name="cmbOpciones" id="cmbOpciones">
+                                    <option value="01">Opción 1</option>
+                                    <option value="02">Opción 2</option>
+                                    <option value="03">Opción 3</option>
+                                    <option value="04">Opción 4</option>
+                                    <option value="05">Opción 5</option>
+                                </select>
+                            </div>
+                            <div class="field">
+                                <button name="bntEnviar" type="submit">
+                                    Enviar
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </section>
     </main>
-    <aside>
-        <!--
-                contenido no relacionado con el contenido de la página
-             -->
+    <aside class="loader">
+        <div class="spinner">
+            &nbsp;
+        </div>
     </aside>
     <footer>
         <div>Copyright &copy; 2026</div>
@@ -181,6 +232,15 @@
             </ul>
         </nav>
     </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", ()=>{
+            setTimeout(()=>{
+                document
+                    .querySelector(".loader")
+                    .classList.add("hidden");
+            }, 2000);
+        });
+    </script>
 </body>
 
 </html>

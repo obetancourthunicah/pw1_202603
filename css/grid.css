@@ -11,7 +11,7 @@
 }
 .grid .row [class*='col-'] {
     flex:1 0;
-    border:1px solid #333;
+    /* border:1px solid #333; */
 }
 
 .grid .row .col-1 { flex-basis: calc(100%/12*1); }

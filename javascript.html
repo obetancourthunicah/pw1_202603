@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Usando Javascript</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+    </head>
+    <body>
+        <h1>Usando HTML y Javascript</h1>
+        <div onclick="alert('Hola Mundo!!!!');">Haz Click Aquí</div>
+        <div id="scriptBlockClick">Haz Click con Bloque</div>
+        <div class="button">Haz Click con Script</div>
+
+        <script>
+            //DOM (Document Object Model)
+            document.addEventListener("DOMContentLoaded",
+                () => {
+                    let btnClickScript = document.getElementById("scriptBlockClick");
+                    let contador = 0;
+                    btnClickScript.addEventListener("click", ()=>{
+                        alert("Hola Mundo desde Bloque Script!!!!");
+                        contador += 1;
+                        if ( contador > 0) {
+                            btnClickScript.innerHTML = `Haz Click con Bloque (${contador})`;
+                        }
+                    });
+                }
+            );
+        </script>
+        <script src="javascript/script.js"></script>
+    </body>
+</html>
