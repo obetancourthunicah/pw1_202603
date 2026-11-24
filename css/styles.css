@@ -405,6 +405,63 @@ label {
 
 
 
+.carrusel {
+    overflow: hidden;
+    height: 80vh;
+    position: relative;
+}
+
+.carrusel .carrusel-btn {
+    position:absolute;
+    top:50%;
+    transform: translateY(-50%);
+    padding:1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 64px;
+    height: 128px;
+    background-color: #d6a61f;
+    cursor: pointer;
+}
+.carrusel .carrusel-btn.carrusel-btn-left {
+    left:0px;
+}
+.carrusel .carrusel-btn.carrusel-btn-right {
+    right:0px;
+}
+
+.carrusel .carrusel-index{
+    position:absolute;
+    width:100%;
+    bottom: 0px;
+    left:0px;
+    padding:0.5rem 1rem;
+    display:flex;
+    gap:0.75rem;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000aa;
+}
+
+.carrusel .carrusel-index .index-btn{
+    height: 1.5rem;
+    width: 1.5rem;
+    border:2px #000 solid;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: #fff;
+}
+
+.carrusel .cinta {
+    display:flex;
+    transition: transform 1s ease;
+}
+
+.carrusel .cinta .slide {
+    flex-shrink: 0;
+}
+
 @keyframes loader {
     0% {
         transform: rotate(0deg) scale(1);

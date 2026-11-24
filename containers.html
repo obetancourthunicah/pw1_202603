@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="css/grid.css" />
     <script src="javascript/script.js"></script>
+    <script src="javascript/carrusel.js"></script>
     <style>
         /* <selectores> { ..reglas (llave : valor;)}
         /* update HTMLElements set ( propiedad = 'valor', ...)  where tag='h2'; */
@@ -49,19 +50,40 @@
     <main>
 
 
-
-        <section data-role="hero" class="hero-panel">
-            <picture>
-                <source srcset="https://picsum.photos/id/3/1300/640" media="(min-width:1025px)" />
-                <img src="https://picsum.photos/id/3/640/640" alt="hero panel image" />
-            </picture>
-            <div data-role="hero-cta" class="hero-card">
-                <h2>Inscribete en el curso de Portales Web 1</h2>
-                <a href="#pagina_inscripción">Inscribete Aquí</a>
+        <section class="carrusel">
+            <div class="cinta">
+                <section data-role="hero" class="hero-panel slide">
+                    <picture>
+                        <source srcset="https://picsum.photos/id/3/1300/640" media="(min-width:1025px)" />
+                        <img src="https://picsum.photos/id/3/640/640" alt="hero panel image" />
+                    </picture>
+                    <div data-role="hero-cta" class="hero-card">
+                        <h2>Inscribete en el curso de Portales Web 1</h2>
+                        <a href="#pagina_inscripción">Inscribete Aquí</a>
+                    </div>
+                </section>
+                <section data-role="hero" class="hero-panel slide">
+                    <picture>
+                        <source srcset="https://picsum.photos/id/15/1300/640" media="(min-width:1025px)" />
+                        <img src="https://picsum.photos/id/15/640/640" alt="hero panel image" />
+                    </picture>
+                    <div data-role="hero-cta" class="hero-card">
+                        <h2>Slide 2</h2>
+                        <a href="#pagina_inscripción">Inscribete Aquí</a>
+                    </div>
+                </section>
+                <section data-role="hero" class="hero-panel slide">
+                    <picture>
+                        <source srcset="https://picsum.photos/id/32/1300/640" media="(min-width:1025px)" />
+                        <img src="https://picsum.photos/id/32/640/640" alt="hero panel image" />
+                    </picture>
+                    <div data-role="hero-cta" class="hero-card">
+                        <h2>Slide 3</h2>
+                        <a href="#pagina_inscripción">Inscribete Aquí</a>
+                    </div>
+                </section>
             </div>
         </section>
-
-
 
 
 
@@ -238,7 +260,7 @@
                 document
                     .querySelector(".loader")
                     .classList.add("hidden");
-            }, 2000);
+            }, 500);
         });
     </script>
 </body>
