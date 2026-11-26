@@ -324,6 +324,9 @@ form {
     gap: 0.5rem;
     background-color: rgb(var(--form-r),var(--form-g), var(--form-b));
     background-image: url('https://picsum.photos/id/84/640/640');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: darken;
     padding:1rem;
     border-radius: 9px;
 }
@@ -378,6 +381,21 @@ label {
     background-color:rgba(var(--form-r),var(--form-g), var(--form-b), 0.137);
     border-color: rgba(var(--form-r),var(--form-g), var(--form-b), 0.4);
     box-shadow: 0 0 1rem rgba(12, 15, 184, 0.597);
+}
+
+.field.error input, .field.error select {
+    background-color:rgba(255, 255, 255, 0.5);
+    border:1px solid rgba(255, 0, var(--form-b), 0.188);
+    color: #f00;
+}
+.field.error input::placeholder, .field.error label{
+    color: rgba(247, 109, 109, 0.9);
+}
+.field.error .errorList {
+    margin-top:0.5rem;
+    padding-left:1rem;
+    font-style: italic;
+    color: rgba(247, 109, 109, 0.9);
 }
 
 
@@ -451,6 +469,7 @@ label {
     border-radius: 50%;
     cursor: pointer;
     background-color: #fff;
+    transition: all ease 0.5s;
 }
 
 .carrusel .cinta {
@@ -460,6 +479,12 @@ label {
 
 .carrusel .cinta .slide {
     flex-shrink: 0;
+}
+
+.carrusel .index-btn.selected {
+    background-color: #bf982b;
+    width:4.5rem;
+    border-radius: 13px;
 }
 
 @keyframes loader {

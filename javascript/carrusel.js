@@ -35,7 +35,11 @@ class Carrusel {
 
     moveToIndex(toIndex){
         clearTimeout(this.timeOutId);
+        for(let i=0; i < this.slideCount; i++) {
+            this.indexBtns[i].classList.remove("selected");
+        }
         this.currentSlideIndex = toIndex;
+
         if (this.currentSlideIndex == this.slideCount){
             this.slideDirection = -1;
             this.currentSlideIndex -= 2;
@@ -46,6 +50,7 @@ class Carrusel {
         }
         const transitionValue = `-${this.currentSlideIndex * 100}vw`;
         this.cinta.style.transform = `translateX(${transitionValue})`;
+        this.indexBtns[this.currentSlideIndex].classList.add("selected");
         this.tick();
     }
 
@@ -80,6 +85,9 @@ class Carrusel {
         for (let i = 0; i<this.slideCount ; i++) {
             const btnIndex = document.createElement("DIV");
             btnIndex.classList.add("index-btn");
+            if (i == 0 ) {
+                btnIndex.classList.add("selected");
+            }
             btnIndex.addEventListener("click", (e)=>{
                 e.preventDefault();
                 e.stopPropagation();

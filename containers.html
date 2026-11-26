@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/grid.css" />
     <script src="javascript/script.js"></script>
     <script src="javascript/carrusel.js"></script>
+    <script src="javascript/validator.js"></script>
     <style>
         /* <selectores> { ..reglas (llave : valor;)}
         /* update HTMLElements set ( propiedad = 'valor', ...)  where tag='h2'; */
@@ -198,14 +199,22 @@
                         <h2>
                             Demo formulario
                         </h2>
-                        <form action="containers.html" method="GET">
+                        <form id="registerForm" action="containers.html" method="GET" novalidate>
                             <div class="field">
                                 <label for="txtNombre">Nombre:</label>
-                                <input type="text" name="txtNombre" id="txtNombre" placeholder="Nombre Completo" />
+                                <input type="text" required name="txtNombre" id="txtNombre" placeholder="Nombre Completo" />
                             </div>
                             <div class="field">
                                 <label for="txtEmail">Correo:</label>
-                                <input type="text" name="txtEmail" id="txtEmail" placeholder="correo electrónico" />
+                                <input type="email" name="txtEmail"
+                                    pattern="^((?!\.)[\w\-_.]*[^.])(@\w+)(\.\w+(\.\w+)?[^.\W])$"
+                                id="txtEmail" placeholder="correo electrónico" />
+                            </div>
+                            <div class="field">
+                                <label for="intNota">Nota Parcial:</label>
+                                <input type="number" name="intNota"
+                                    min="1" max="100" step="1"
+                                id="intNota" placeholder="Nota Parcial 1-100" />
                             </div>
                             <div class="field">
                                 <label for="cmbOpciones">Opciones:</label>
